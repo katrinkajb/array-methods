@@ -20,7 +20,12 @@ const filter = (array, callback) => {
     return newArray;
 };
 
+const findIndex = () => {
+    
+}
+
 module.exports = {
     map,
     filter,
+    findIndex
 };

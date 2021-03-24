@@ -20,12 +20,22 @@ const filter = (array, callback) => {
     return newArray;
 };
 
-const findIndex = () => {
+const findIndex = (array, callback) => {
+    for (let i = 0; i < array.length - 1; i++) {
+        if (callback(array[i])) {
+            return i;
+        }
+    }
+    return -1
+}
+
+const reduce = () => {
     
 }
 
 module.exports = {
     map,
     filter,
-    findIndex
+    findIndex,
+    reduce,
 };

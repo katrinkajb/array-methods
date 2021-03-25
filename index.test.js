@@ -56,8 +56,8 @@ describe('every takes an array and a callback and returns true if the callback r
         const callback = (item) => item === 1;
         
         expect(
-            every(array, callback).toBeFalsy()
-        )
+            every(array, callback)
+        ).toBeFalsy()
     })
 
     it('should return true', () => {
@@ -66,7 +66,7 @@ describe('every takes an array and a callback and returns true if the callback r
         const callback = (item) => item === 1;
         
         expect(
-            every(array, callback).toBeTruthy()
-        )
+            every(array, callback)
+        ).toBeTruthy()
     })
 })

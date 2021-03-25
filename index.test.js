@@ -3,6 +3,7 @@ const {
     filter,
     findIndex,
     reduce,
+    every,
 } = require('./index');
 
 describe('map function', () => {
@@ -48,12 +49,24 @@ describe('reduce', () => {
     })
 })
 
-// describe('every', () => {
-//     it('takes an array and a callback and returns the final accumulator value', () => {
-//         expect(
-//             reduce(
-//                 [1, 2, 3, 4], callback(acc, item)
-//             )
-//             ).toEqual();
-//     })
-// })
+describe('every takes an array and a callback and returns true if the callback returns true', () => {
+    it('should return false', () => {
+        const array = [1, 2, 3, 4, 5];
+
+        const callback = (item) => item === 1;
+        
+        expect(
+            every(array, callback).toBeFalsy()
+        )
+    })
+
+    it('should return true', () => {
+        const array = [1, 1, 1];
+
+        const callback = (item) => item === 1;
+        
+        expect(
+            every(array, callback).toBeTruthy()
+        )
+    })
+})

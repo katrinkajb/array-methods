@@ -37,6 +37,23 @@ describe('findIndex', () => {
 
 describe('reduce', () => {
     it('takes an array, a callback, and an initial value and returns the final accumulator value', () => {
-        expect(reduce()).toEqual();
+        const array = [1, 2, 3, 4, 5];
+        let initialValue = 2;
+        const callback = (acc, item) => acc + item;
+        
+        expect(
+            reduce(
+                array, callback, initialValue)
+            ).toEqual(17);
     })
 })
+
+// describe('every', () => {
+//     it('takes an array and a callback and returns the final accumulator value', () => {
+//         expect(
+//             reduce(
+//                 [1, 2, 3, 4], callback(acc, item)
+//             )
+//             ).toEqual();
+//     })
+// })

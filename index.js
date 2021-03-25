@@ -29,8 +29,12 @@ const findIndex = (array, callback) => {
     return -1
 }
 
-const reduce = () => {
-    
+const reduce = (array, callback, initialValue) => {
+    let acc = initialValue;
+
+    for(let item of array) acc = callback(acc, item);
+
+    return acc;
 }
 
 module.exports = {

@@ -13,7 +13,7 @@ const filter = (array, callback) => {
 
     for (const item of array) {
         const newItem = callback(item);
-        if (newItem === true) {
+        if (newItem) {
             newArray = [...newArray, item]
         }
     }

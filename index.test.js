@@ -50,14 +50,22 @@ describe('findIndex', () => {
 
 describe('reduce', () => {
     it('takes an array, a callback, and an initial value and returns the final accumulator value', () => {
-        const array = [1, 2, 3, 4, 5];
+        const array = [1, 2, 3, 4];
         const callback = (acc, item) => acc + item;
         let initialValue = 2;
         
         expect(
-            reduce(
-                array, callback, initialValue)
-            ).toEqual(17);
+            reduce(array, callback, initialValue)
+            ).toEqual(12);
+    })
+
+    it('takes an array and a callback and returns the final accumulator value', () => {
+        const array = [1, 2, 3, 4];
+        const callback = (acc, item) => acc + item;
+        
+        expect(
+            reduce(array, callback)
+            ).toEqual(10);
     })
 })
 
